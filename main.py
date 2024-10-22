@@ -43,8 +43,13 @@ def download_video():
         'outtmpl': 'downloads/%(title)s.%(ext)s',
         'format': 'bestvideo[height<=1080]+bestaudio/best[height<=1080]',  # Limit video to 1080p max
         'n_threads': 4,  # Parallel download with 4 threads
-        'verbose': True  # Enable verbose output to monitor download speed
+        'verbose': True,  # Enable verbose output to monitor download speed
+        'cookiefile': 'cookies.txt'  # Use a cookie file
     }
+
+    # Create a cookies.txt file and add the LOGIN_INFO cookie
+    with open('cookies.txt', 'w') as cookie_file:
+        cookie_file.write('LOGIN_INFO={};\n'.format('AFmmF2swRAIgJx9iLOhvRARuWYgSMJK4rUqTltHpahT8AlpXu_elKPMCIEGkGQt-K5Vl2ns88dELpS0iaSrdofeglLgA7w7BSg3A:QUQ3MjNmd2JLcHU4a1pCUW5GT2FjNDNnaUVySlBoZ2xPOTdiUGxDQ2pkZ1VwU2kxNWpSRk9GbVVuMkVqYlh2UDY1VEpTVndtNzVOQVhxa0dGbEJMcmZKZVprOU02aXZEQjhCbWRjRXh4QnZQRVdsd2xEQ2JRNTdLYWJjN1JiMUZPZTdlbElaYXRtNEJUblYyQ3lqZHBaVDctUzRtNHloYTJR'))
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
