@@ -1,0 +1,17 @@
+# Ignore system files and directories
+AppData/
+Contacts/
+Downloads/
+Favorites/
+Links/
+NTUSER.*
+OneDrive/
+Saved Games/
+Searches/
+Tracing/
+Videos/
+Desktop.ini
+Thumbs.db
+
+# Ignore IDE-specific directories
+.vscode/
