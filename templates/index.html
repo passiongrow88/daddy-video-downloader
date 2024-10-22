@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daddy Video Downloader</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .message-container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .progress {
+            display: none; /* Hidden by default */
+            height: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-container">
+        <h2>Daddy Video Downloader</h2>
+        <form id="download-form" method="POST" action="/download">
+            <div class="form-group">
+                <input type="text" name="url" class="form-control" placeholder="Enter Video URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Download</button>
+        </form>
+
+        <!-- Progress Bar -->
+        <div class="progress" id="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <h4 id="status-message" style="display: none;">Processing your video... Please wait.</h4>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('download-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            // Hide the form and show the progress bar
+            document.getElementById('download-form').style.display = 'none';
+            document.getElementById('progress-bar-container').style.display = 'block';
+            document.getElementById('status-message').style.display = 'block';
+
+            let progress = 0;
+            let progressBar = document.getElementById('progress-bar');
+
+            // Simulate the progress bar filling up over 10 seconds
+            let interval = setInterval(function() {
+                progress += 10;
+                progressBar.style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    // Now submit the form to the server once the progress bar completes
+                    document.getElementById('download-form').submit();
+                }
+            }, 1000);  // Increment progress every second (1000 milliseconds)
+
+        });
+    </script>
+
+</body>
+</html>

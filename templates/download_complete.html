@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Complete</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .message-container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .message-container h3 {
+            margin-bottom: 20px;
+        }
+        .message-container a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-container">
+        <h3>Download Complete!</h3>
+        <a href="{{ file_link }}" class="btn btn-primary">Click here to download your video</a>
+        <br><br>
+        <!-- Go Back Button -->
+        <a href="/" class="btn btn-secondary">Download Another Video</a>
+    </div>
+
+</body>
+</html>
