@@ -47,10 +47,6 @@ def download_video():
         'cookiefile': 'cookies.txt'  # Use a cookie file
     }
 
-    # Create a cookies.txt file and add the LOGIN_INFO cookie
-    with open('cookies.txt', 'w') as cookie_file:
-        cookie_file.write('LOGIN_INFO={};\n'.format('AFmmF2swRAIgJx9iLOhvRARuWYgSMJK4rUqTltHpahT8AlpXu_elKPMCIEGkGQt-K5Vl2ns88dELpS0iaSrdofeglLgA7w7BSg3A:QUQ3MjNmd2JLcHU4a1pCUW5GT2FjNDNnaUVySlBoZ2xPOTdiUGxDQ2pkZ1VwU2kxNWpSRk9GbVVuMkVqYlh2UDY1VEpTVndtNzVOQVhxa0dGbEJMcmZKZVprOU02aXZEQjhCbWRjRXh4QnZQRVdsd2xEQ2JRNTdLYWJjN1JiMUZPZTdlbElaYXRtNEJUblYyQ3lqZHBaVDctUzRtNHloYTJR'))
-
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(video_url, download=True)

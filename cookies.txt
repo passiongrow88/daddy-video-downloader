@@ -1,7 +1,2 @@
 # Netscape HTTP Cookie File
-# This file was generated for yt-dlp
-# Edit this file to add or remove cookies
-
-# Domain   Path   Secure   Expiration Time   Name   Value
-.youtube.com    /    FALSE    2147483647    LOGIN_INFO    AFmmF2swRAIgJx9iLOhvRARuWYgSMJK4rUqTltHpahT8AlpXu_elKPMCIEGkGQt-K5Vl2ns88dELpS0iaSrdofeglLgA7w7BSg3A
-.youtube.com    /    FALSE    2147483647    another_cookie_name    QUQ3MjNmd2JLcHU4a1pCUW5GT2FjNDNnaUVySlBoZ2xPOTdiUGxDQ2pkZ1VwU2kxNWpSRk9GbVVuMkVqYlh2UDY1VEpTVndtNzVOQVhxa0dGbEJMcmZKZVprOU02aXZEQjhCbWRjRXh4QnZQRVdsd2xEQ2JRNTdLYWJjN1JiMUZPZTdlbElaYXRtNEJUblYyQ3lqZHBaVDctUzRtNHloYTJR
+.youtube.com    TRUE    /    FALSE   2147483647    LOGIN_INFO    AFmmF2swRAIgJx9iLOhvRARuWYgSMJK4rUqTltHpahT8AlpXu_elKPMCIEGkGQt-K5Vl2ns88dELpS0iaSrdofeglLgA7w7BSg3A:QUQ3MjNmd2JLcHU4a1pCUW5GT2FjNDNnaUVySlBoZ2xPOTdiUGxDQ2pkZ1VwU2kxNWpSRk9GbVVuMkVqYlh2UDY1VEpTVndtNzVOQVhxa0dGbEJMcmZKZVprOU02aXZEQjhCbWRjRXh4QnZQRVdsd2xEQ2JRNTdLYWJjN1JiMUZPZTdlbElaYXRtNEJUblYyQ3lqZHBaVDctUzRtNHloYTJR
