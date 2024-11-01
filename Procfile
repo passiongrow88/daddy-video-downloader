@@ -1,1 +1,1 @@
-web: gunicorn main:app
+web: python download_video.py
